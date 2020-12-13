@@ -24,5 +24,21 @@ public class OrderedTester {
     catch(IllegalArgumentException e) {
       e.printStackTrace();
     }
+    System.out.println();
+    b.add(1);
+    b.add(0,5);
+    b.add(0,3);
+    b.add(0,2);
+    b.add(0,4);
+    b.add(0,6);
+    for(int j = 0; j<b.size(); j++) {
+      System.out.println(b.get(j));
+    }
+    try {
+      b.add(4,null);
+    }
+    catch(IllegalArgumentException e) {
+      e.printStackTrace();
+    }
   }
 }

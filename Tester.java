@@ -5,5 +5,27 @@ public class Tester {
       System.out.println(t.size());
       NoNullArrayList<String> n = new NoNullArrayList<String>(50);
       System.out.println(n.size());
+      for(int i = 0; i<10; i++) {
+        t.add("fix");
+      }
+      System.out.println(t.set(5,"well"));
+      System.out.println(t.size());
+      try{
+        t.set(0,null);
+      }
+      catch(IllegalArgumentException e) {
+        e.printStackTrace();
+      }
+      System.out.println();
+
+      System.out.println("Testing add");
+      System.out.println(t.add("fee"));
+      System.out.println(t.size());
+      try {
+        t.add(null);
+      }
+      catch(IllegalArgumentException e) {
+        e.printStackTrace();
+      }
   }
 }

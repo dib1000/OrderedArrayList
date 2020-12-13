@@ -27,5 +27,13 @@ public class Tester {
       catch(IllegalArgumentException e) {
         e.printStackTrace();
       }
+      t.add(5, "hi");
+      System.out.println(t.get(5));
+      try {
+        t.add(5,null);
+      }
+      catch(IllegalArgumentException e) {
+        e.printStackTrace();
+      }
   }
 }

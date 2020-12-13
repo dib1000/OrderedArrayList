@@ -40,5 +40,22 @@ public class OrderedTester {
     catch(IllegalArgumentException e) {
       e.printStackTrace();
     }
+    System.out.println();
+
+    System.out.println("Testing set methods");
+    System.out.println(a.set(2,7));
+    for(int k = 0; k<a.size(); k++) {
+      System.out.println(a.get(k));
+    }
+    System.out.println(b.set(0,3));
+    for(int l = 0; l<b.size(); l++) {
+      System.out.println(b.get(l));
+    }
+    try {
+      b.set(3,null);
+    }
+    catch(IllegalArgumentException e) {
+      e.printStackTrace();
+    }
   }
 }
